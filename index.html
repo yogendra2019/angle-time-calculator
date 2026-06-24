@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Angle & Time Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Angle & Time Calculator</h2>
+
+  <div class="main-container">
+    <!-- Left side: inputs and buttons -->
+    <div class="controls">
+      <h3>First Value</h3>
+      <div class="input-section">
+        <label>Degrees/Hours: <input id="degHour1" type="number"></label>
+        <label>Minutes: <input id="minutes1" type="number"></label>
+        <label>Seconds: <input id="seconds1" type="number"></label>
+      </div>
+
+      <h3>Second Value</h3>
+      <div class="input-section">
+        <label>Degrees/Hours: <input id="degHour2" type="number"></label>
+        <label>Minutes: <input id="minutes2" type="number"></label>
+        <label>Seconds: <input id="seconds2" type="number"></label>
+      </div>
+
+      <div class="buttons">
+        <button onclick="calculate('add')">Add</button>
+        <button onclick="calculate('subtract')">Subtract</button>
+        <button onclick="calculate('multiply')">Multiply</button>
+        <button onclick="calculate('divide')">Divide</button>
+
+        <h4>Conversions</h4>
+        <label for="valueSelector">Select Value:</label>
+        <select id="valueSelector">
+          <option value="1">First Value</option>
+          <option value="2">Second Value</option>
+        </select>
+
+        <button onclick="convertToDecimal()">Convert → Decimal</button>
+        <button onclick="convertToDMS()">Convert Decimal → DMS</button>
+        <button onclick="convertAngleToTime()">Angle → Time</button>
+        <button onclick="convertTimeToAngle()">Time → Angle</button>
+
+        <h4>Scale</h4>
+        <input id="decimalFactor" type="number" step="0.01" placeholder="Enter decimal factor">
+        <button onclick="scaleValue('multiply')">Multiply by Decimal</button>
+        <button onclick="scaleValue('divide')">Divide by Decimal</button>
+
+        <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+      </div>
+    </div>
+
+    <!-- Right side: visualizer and result -->
+    <div class="visualizer-panel">
+      <h3>Visualizer</h3>
+      <canvas id="visualizer" width="200" height="200"></canvas>
+
+      <h3>Result</h3>
+      <div id="result" class="result-box"></div>
+      <button onclick="copyResult()">Copy Result</button>
+    </div>
+  </div>
+
+  <h3>History</h3>
+  <button onclick="clearHistory()">Clear History</button>
+  <ul id="history"></ul>
+
+  <script src="script.js"></script>
+</body>
+</html>

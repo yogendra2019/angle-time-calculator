@@ -1,0 +1,64 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 15px;
+  background: #f4f4f4;
+  color: #000;
+}
+
+.dark-mode {
+  background: #222;
+  color: #eee;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.main-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.controls {
+  flex: 1;
+}
+
+.visualizer-panel {
+  flex: 1;
+  text-align: center;
+}
+
+.input-section {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin: 5px 0;
+}
+
+button {
+  margin: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.result-box {
+  margin-top: 10px;
+  padding: 10px;
+  background: #fff;
+  border: 2px solid #007acc;
+  border-radius: 6px;
+  font-weight: bold;
+  min-height: 40px;
+}
+
+#history {
+  max-height: 150px;
+  overflow-y: auto;
+  background: #fff;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
